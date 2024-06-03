@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react'
 import info from './info.svg';
 import RadioButtonGroup from '../../Components/RadioButtonGroup/ControlledRadioButtonsGroup';
@@ -49,11 +50,11 @@ function Page2() {
                     style={selectStyle}
                 >
                     <option value="">Bank transfers ( Takes 3-5 days for ACH transfer, Free)</option>
-                    <option value="option1">Option 1</option>
-                    <option value="option2">Option 2</option>
-                    <option value="option3">Option 3</option>
+                    <option value="option1">Bank transfers ( Takes 3-5 days for ACH transfer, Free)</option>
+                    <option value="option2">Card transfer( Instant, processing fee of 2.9% + 0.3$ applied)</option>
+
                 </select>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
+                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start' }}>
                     <div>
                         <p style={{ display: 'flex', justifyContent: 'flex-start', marginBottom: '10px', marginTop: '10px', color: '#5F5A6B', fontFamily: 'Poppins', fontWeight: '400', fontSize: '14px', lineHeight: '21px', gap: '4px' }}>Auto reload by </p>
                         <div style={{ display: 'flex', flexDirection: 'row' }}>
@@ -65,11 +66,11 @@ function Page2() {
                                     fontWeight: '400',
                                     fontSize: '14px',
                                     lineHeight: '21px',
-                                    width: '90%',
+                                    width: '100%',
                                     height: '40px',
                                     borderRadius: '6px',
                                     border: '1px solid #D2D1D6',
-                                    padding: '6px 12px',
+                                    padding: '6px 20px',
 
                                 }}
                                 type="text"
@@ -81,7 +82,7 @@ function Page2() {
                             <p style={{ marginLeft: '5px', color: '#B6B2BD', fontWeight: '500', fontSize: '14px', lineHeight: '21px', marginTop: '10px' }}>$</p>
                         </div>
                     </div>
-                    <div style={{ marginLeft: '5%' }}>
+                    <div style={{ marginLeft: '25%' }}>
                         <p style={{ display: 'flex', justifyContent: 'flex-start', marginBottom: '10px', marginTop: '10px', color: '#5F5A6B', fontFamily: 'Poppins', fontWeight: '400', fontSize: '14px', lineHeight: '21px', gap: '4px' }}>When balance go below</p>
                         <div style={{ display: 'flex', flexDirection: 'row' }}>
                             <input
@@ -92,11 +93,11 @@ function Page2() {
                                     fontWeight: '400',
                                     fontSize: '14px',
                                     lineHeight: '21px',
-                                    width: '90%',
+                                    width: '100%',
                                     height: '40px',
                                     borderRadius: '6px',
                                     border: '1px solid #D2D1D6',
-                                    padding: '6px 12px',
+                                    padding: '6px 20px',
 
                                 }}
                                 type="text"
@@ -134,23 +135,24 @@ function Page2() {
 
                 <p style={{ display: 'flex', justifyContent: 'flex-start', color: '#121114', fontWeight: '400', fontSize: '16px', lineHeight: '24px' }}>Additional charge settings</p>
                 <hr style={{ marginTop: '10px', marginBottom: '10px', width: '100%', border: '1p solid #D9D9D9' }}></hr>
-                <div style={{ display: 'flex', flexDirection: 'row' }}>
-                    <div>
-                        <p style={{ display: 'flex', justifyContent: 'flex-start', marginBottom: '5px', fontFamily: 'Poppins', gap: '4px', color: '#5F5A6B', fontWeight: '400', fontSize: '16px', lineHeight: '24px' }}>RTO charges
+                <div style={{ display: 'flex', flexDirection: 'row', width: '100%' }}>
+                    <div style={{ width: '80%' }}>
+                        <p style={{ display: 'flex', justifyContent: 'flex-start', marginBottom: '10px', fontFamily: 'Poppins', gap: '4px', color: '#5F5A6B', fontWeight: '400', fontSize: '16px', lineHeight: '24px', marginTop: '5px' }}>RTO charges
                             <Popover content={content1} trigger="click">
                                 <img style={{ marginLeft: '5.6px' }} src={info} alt="info icon" />
                             </Popover>
                         </p>
 
 
-                        <p style={{ display: 'flex', justifyContent: 'flex-start', fontFamily: 'Poppins', fontWeight: '400', fontSize: '16px', lineHeight: '24px', color: '#5F5A6B', gap: '4px', marginTop: '15px' }}>Dimension and weight discrepancy charges
+                        <p style={{ display: 'flex', justifyContent: 'flex-start', fontFamily: 'Poppins', fontWeight: '400', fontSize: '16px', lineHeight: '24px', color: '#5F5A6B', gap: '4px', marginTop: '16px' }}>Dimension and weight discrepancy charges
                             <Popover content={content2} trigger="click">
                                 <img style={{ marginLeft: '5.6px' }} src={info} alt="info icon" />
                             </Popover>
                         </p>
-                    </div>
 
-                    <div style={{ marginLeft: '30px' }}><RadioButtonGroup /></div>
+                    </div>
+                    <div style={{ width: '20%', display: 'flex', justifyContent: 'flex-end' }}><RadioButtonGroup /></div>
+
                 </div>
             </div >
 
